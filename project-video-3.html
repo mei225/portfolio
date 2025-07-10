@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ↓↓↓ 이 페이지의 대표 제목으로 수정하세요. ↓↓↓ -->
+    <title>영상 제작 포트폴리오 - 정윤희</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        /* CSS 코드는 여기에 포함됩니다. */
+        :root {
+            --primary-color: #007BFF;
+            --text-color: #333;
+            --light-gray-color: #f4f4f4;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Pretendard', sans-serif; color: var(--text-color); background-color: var(--light-gray-color); }
+        .btn { display: inline-block; background-color: var(--primary-color); color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: 500; transition: background-color 0.3s ease; border: none; cursor: pointer; }
+        .btn:hover { background-color: #0056b3; }
+        
+        /* 헤더 */
+        header { background-color: rgba(255, 255, 255, 0.9); box-shadow: 0 2px 5px rgba(0,0,0,0.1); backdrop-filter: blur(5px); }
+        header nav { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .logo a { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: var(--text-color); }
+
+        /* 페이지 상단 헤더 */
+        .page-header {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .page-header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+        .page-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* 비디오 갤러리 */
+        .gallery-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        .video-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .video-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .video-item.hidden {
+            display: none;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 비율 */
+            height: 0;
+            background-color: #000;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .video-info {
+            padding: 20px;
+        }
+        .video-info h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .video-info p {
+            font-size: 0.95rem;
+            color: #777;
+        }
+
+        /* 더보기 버튼 */
+        .load-more-container {
+            text-align: center;
+            margin-top: 40px;
+            padding-bottom: 40px;
+        }
+        #load-more-btn.hidden {
+            display: none;
+        }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+            .page-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Jung Yunhee</a></div>
+            <a href="index.html#portfolio" class="btn">목록으로</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ======== 페이지 상단 헤더 ======== -->
+        <div class="page-header">
+            <!-- ↓↓↓ 1. 이 페이지의 대표 제목과 설명을 수정하세요. ↓↓↓ -->
+            <h1>영상 제작 포트폴리오</h1>
+            <p>
+                기획부터 촬영, 편집까지 원스톱으로 진행한 영상 제작 프로젝트 모음입니다.<br>
+                유튜브 콘텐츠, 기업 홍보, 인터뷰 등 다양한 목적에 맞는 최적의 결과물을 확인해보세요.
+            </p>
+        </div>
+
+        <!-- ======== 비디오 갤러리 ======== -->
+        <div class="gallery-container">
+            <div class="video-grid">
+                <!-- ↓↓↓ 2. 10개의 비디오 정보를 수정하세요. ↓↓↓ -->
+
+                <!-- 비디오 1 -->
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/NuKKnF-wAQo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>밀양시 우수도시 선정</h3>
+                        <p>클라이언트: 밀양시 / 역할: 영상 편집</p>
+                    </div>
+                </div>
+
+                <!-- 비디오 2 -->
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/XxriQ_PRv70" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>MBC경남 밀톡2</h3>
+                        <p>클라이언트: MBC경남 / 역할: TV 송출본 편집, 포스터 촬영</p>
+                    </div>
+                </div>
+
+                <!-- 비디오 3 -->
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/uTUJIqM6Thg" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>양산남부시장 시리즈</h3>
+                        <p>클라이언트: 양산남부시장 / 역할: 유튜브 콘텐츠 편집 (약 40편)</p>
+                    </div>
+                </div>
+
+                <!-- 비디오 4 -->
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/wM-8OQb7ktU" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>밀양시 관광지 소개</h3>
+                        <p>클라이언트: 밀양시 / 역할: 영상 촬영 및 편집</p>
+                    </div>
+                </div>
+                
+                <!-- 비디오 5 -->
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/gaUOtSijat8" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>경남대학교 졸업생 특강</h3>
+                        <p>클라이언트: 경남대학교 / 역할: 영상 촬영 및 편집</p>
+                    </div>
+                </div>
+                
+                <!-- 비디오 6 -->
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/placeholder6" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>프로젝트 제목 6</h3>
+                        <p>프로젝트 설명 6</p>
+                    </div>
+                </div>
+
+                <!-- 비디오 7 -->
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/placeholder7" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>프로젝트 제목 7</h3>
+                        <p>프로젝트 설명 7</p>
+                    </div>
+                </div>
+
+                <!-- 비디오 8 -->
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/placeholder8" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>프로젝트 제목 8</h3>
+                        <p>프로젝트 설명 8</p>
+                    </div>
+                </div>
+
+                <!-- 비디오 9 -->
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/placeholder9" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>프로젝트 제목 9</h3>
+                        <p>프로젝트 설명 9</p>
+                    </div>
+                </div>
+
+                <!-- 비디오 10 -->
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/placeholder10" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>프로젝트 제목 10</h3>
+                        <p>프로젝트 설명 10</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more-container">
+                <button id="load-more-btn" class="btn">더보기</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoItems = document.querySelectorAll('.video-item');
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            const itemsPerLoad = 4;
+            let visibleItems = itemsPerLoad;
+
+            // 초기에 보여줄 아이템 외에는 숨김
+            const updateVisibility = () => {
+                videoItems.forEach((item, index) => {
+                    if (index < visibleItems) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+
+                // 모든 아이템이 보이면 더보기 버튼 숨김
+                if (visibleItems >= videoItems.length) {
+                    loadMoreBtn.classList.add('hidden');
+                } else {
+                    loadMoreBtn.classList.remove('hidden');
+                }
+            };
+            
+            // 더보기 버튼 클릭 이벤트
+            loadMoreBtn.addEventListener('click', () => {
+                visibleItems += itemsPerLoad;
+                updateVisibility();
+            });
+
+            // 페이지 로드 시 초기 상태 설정
+            updateVisibility();
+        });
+    </script>
+</body>
+</html>
