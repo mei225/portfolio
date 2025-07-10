@@ -62,6 +62,8 @@
         .portfolio-overlay h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 5px; }
         .portfolio-overlay p { font-size: 0.9rem; font-weight: 400; opacity: 0.9; }
         .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+        .load-more-container { text-align: center; margin-top: 40px; }
+        #load-more-btn.hidden { display: none; }
         #about { padding: var(--section-padding); }
         .about-content { display: flex; align-items: center; gap: 50px; }
         .about-text { flex: 2; }
@@ -78,6 +80,11 @@
         #contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; }
         #contact-form input, #contact-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc; font-family: 'Pretendard', sans-serif; }
         footer { background-color: var(--text-color); color: #fff; text-align: center; padding: 20px; }
+        .modal-bg { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 1001; justify-content: center; align-items: center; }
+        .modal-content { position: relative; width: 90%; max-width: 800px; }
+        .close-btn { position: absolute; top: -30px; right: 0; font-size: 30px; color: #fff; cursor: pointer; }
+        .modal-img { width: 100%; max-height: 70vh; object-fit: contain; display: block; }
+        .modal-description { color: #fff; margin-top: 15px; line-height: 1.6; text-align: center; }
         @media (max-width: 768px) {
             .nav-links { display: none; flex-direction: column; width: 100%; position: absolute; top: 70px; left: 0; background-color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
             .nav-links.active { display: flex; }
@@ -139,25 +146,25 @@
                 <a href="project-video-4.html" class="portfolio-item video"><img src="https://img.youtube.com/vi/WBDMK_GRq4Y/maxresdefault.jpg" alt="함안군 공식 유튜브"><div class="portfolio-overlay"><div><h3>함안군 공식 유튜브</h3><p>유튜브 콘텐츠용 영상 편집</p></div></div></a>
                 <a href="project-video-5.html" class="portfolio-item video"><img src="https://img.youtube.com/vi/NAu9GDlKm0I/maxresdefault.jpg" alt="경남대학교 기계공학부"><div class="portfolio-overlay"><div><h3>경남대학교 기계공학부</h3><p>유튜브 콘텐츠용 영상 촬영 및 편집</p></div></div></a>
                 <a href="project-video-6.html" class="portfolio-item video"><img src="https://img.youtube.com/vi/agIUih-b6r0/maxresdefault.jpg" alt="MBC경남 히든챔피언"><div class="portfolio-overlay"><div><h3>MBC경남 히든챔피언</h3><p>히든챔피언 프로그램 촬영 및 편집</p></div></div></a>
-                <a href="project-video-7.html" class="portfolio-item video"><img src="https://img.youtube.com/vi/RZoZ1hK5A-0/maxresdefault.jpg" alt="MBC경남 공식 유튜브"><div class="portfolio-overlay"><div><h3>MBC경남 공식 유튜브</h3><p>유튜브 콘텐츠용 영상 촬영 및 편집</p></div></div></a>
-                <a href="project-video-8.html" class="portfolio-item video"><img src="https://img.youtube.com/vi/sT82zeRiBYw/maxresdefault.jpg" alt="경남대학교 창업보육관 '세창시'"><div class="portfolio-overlay"><div><h3>경남대학교 창업보육관 '세창시'</h3><p>'세상을 바꾸는 창업시간' 시리즈 촬영 및 편집</p></div></div></a>
-                <a href="project-video-9.html" class="portfolio-item video"><img src="https://img.youtube.com/vi/pDmRhSCeb1w/maxresdefault.jpg" alt="그 외 작업들"><div class="portfolio-overlay"><div><h3>그 외 작업들</h3><p>단발성 프로젝트 모음</p></div></div></a>
-               
-                <!-- 자막 디자인 6개 -->
-                <a href="project-subtitle-1.html" class="portfolio-item subtitle hidden"><img src="https://via.placeholder.com/400x225/E5E0FF/FFFFFF?text=Subtitle+1" alt="자막 1"><div class="portfolio-overlay"><div><h3>가을산책 자막 패키지</h3><p>가을산책 자막 패키지 제작</p></div></div></a>
-                <a href="project-subtitle-2.html" class="portfolio-item subtitle hidden"><img src="https://via.placeholder.com/400x225/E5E0FF/FFFFFF?text=Subtitle+2" alt="자막 2"><div class="portfolio-overlay"><div><h3>히든챔피언 자막 패키지</h3><p>히든챔피언 자막 패키지 제작</p></div></div></a>
-                <a href="project-subtitle-3.html" class="portfolio-item subtitle hidden"><img src="https://via.placeholder.com/400x225/E5E0FF/FFFFFF?text=Subtitle+3" alt="자막 3"><div class="portfolio-overlay"><div><h3>김해시 자살예방 자막 패키지</h3><p>김해시 자살예방 자막 패키지 제작</p></div></div></a>
-                <a href="project-subtitle-4.html" class="portfolio-item subtitle hidden"><img src="https://via.placeholder.com/400x225/E5E0FF/FFFFFF?text=Subtitle+4" alt="자막 4"><div class="portfolio-overlay"><div><h3>밀톡2 자막 추가</h3><p>밀톡2 자막 추가 제작</p></div></div></a>
-                <a href="project-subtitle-5.html" class="portfolio-item subtitle hidden"><img src="https://via.placeholder.com/400x225/E5E0FF/FFFFFF?text=Subtitle+5" alt="자막 5"><div class="portfolio-overlay"><div><h3>다랑논 프로젝트 자막 패키지</h3><p>다랑논 프로젝트 자막 패키지 제작</p></div></div></a>
-                <a href="project-subtitle-6.html" class="portfolio-item subtitle hidden"><img src="https://via.placeholder.com/400x225/E5E0FF/FFFFFF?text=Subtitle+6" alt="자막 6"><div class="portfolio-overlay"><div><h3>그 외 작업들</h3><p>그 외 자막 제작</p></div></div></a>
                 
-                <!-- 썸네일 제작 6개 -->
-                <a href="project-thumbnail-1.html" class="portfolio-item thumbnail hidden"><img src="https://via.placeholder.com/400x225/FFE5E5/FFFFFF?text=Thumbnail+1" alt="썸네일 1"><div class="portfolio-overlay"><div><h3>썸네일 제작 1</h3><p>역할 설명</p></div></div></a>
-                <a href="project-thumbnail-2.html" class="portfolio-item thumbnail hidden"><img src="https://via.placeholder.com/400x225/FFE5E5/FFFFFF?text=Thumbnail+2" alt="썸네일 2"><div class="portfolio-overlay"><div><h3>썸네일 제작 2</h3><p>역할 설명</p></div></div></a>
-                <a href="project-thumbnail-3.html" class="portfolio-item thumbnail hidden"><img src="https://via.placeholder.com/400x225/FFE5E5/FFFFFF?text=Thumbnail+3" alt="썸네일 3"><div class="portfolio-overlay"><div><h3>썸네일 제작 3</h3><p>역할 설명</p></div></div></a>
-                <a href="project-thumbnail-4.html" class="portfolio-item thumbnail hidden"><img src="https://via.placeholder.com/400x225/FFE5E5/FFFFFF?text=Thumbnail+4" alt="썸네일 4"><div class="portfolio-overlay"><div><h3>썸네일 제작 4</h3><p>역할 설명</p></div></div></a>
-                <a href="project-thumbnail-5.html" class="portfolio-item thumbnail hidden"><img src="https://via.placeholder.com/400x225/FFE5E5/FFFFFF?text=Thumbnail+5" alt="썸네일 5"><div class="portfolio-overlay"><div><h3>썸네일 제작 5</h3><p>역할 설명</p></div></div></a>
-                <a href="project-thumbnail-6.html" class="portfolio-item thumbnail hidden"><img src="https://via.placeholder.com/400x225/FFE5E5/FFFFFF?text=Thumbnail+6" alt="썸네일 6"><div class="portfolio-overlay"><div><h3>썸네일 제작 6</h3><p>역할 설명</p></div></div></a>
+                <!-- 자막 디자인 6개 -->
+                <a href="project-subtitle-1.html" class="portfolio-item subtitle"><img src="https://via.placeholder.com/400x225/E5E0FF/FFFFFF?text=Subtitle+1" alt="자막 1"><div class="portfolio-overlay"><div><h3>가을산책 자막 패키지</h3><p>가을산책 자막 패키지 제작</p></div></div></a>
+                <a href="project-subtitle-2.html" class="portfolio-item subtitle"><img src="https://via.placeholder.com/400x225/E5E0FF/FFFFFF?text=Subtitle+2" alt="자막 2"><div class="portfolio-overlay"><div><h3>히든챔피언 자막 패키지</h3><p>히든챔피언 자막 패키지 제작</p></div></div></a>
+                <a href="project-subtitle-3.html" class="portfolio-item subtitle"><img src="https://via.placeholder.com/400x225/E5E0FF/FFFFFF?text=Subtitle+3" alt="자막 3"><div class="portfolio-overlay"><div><h3>김해시 자살예방 자막 패키지</h3><p>김해시 자살예방 자막 패키지 제작</p></div></div></a>
+                <a href="project-subtitle-4.html" class="portfolio-item subtitle"><img src="https://via.placeholder.com/400x225/E5E0FF/FFFFFF?text=Subtitle+4" alt="자막 4"><div class="portfolio-overlay"><div><h3>밀톡2 자막 추가</h3><p>밀톡2 자막 추가 제작</p></div></div></a>
+                <a href="project-subtitle-5.html" class="portfolio-item subtitle"><img src="https://via.placeholder.com/400x225/E5E0FF/FFFFFF?text=Subtitle+5" alt="자막 5"><div class="portfolio-overlay"><div><h3>다랑논 프로젝트 자막 패키지</h3><p>다랑논 프로젝트 자막 패키지 제작</p></div></div></a>
+                <a href="project-subtitle-6.html" class="portfolio-item subtitle"><img src="https://via.placeholder.com/400x225/E5E0FF/FFFFFF?text=Subtitle+6" alt="자막 6"><div class="portfolio-overlay"><div><h3>그 외 작업들</h3><p>그 외 자막 제작</p></div></div></a>
+                
+                <!-- 썸네일 제작 6개 (클릭 시 팝업) -->
+                <div class="portfolio-item thumbnail" data-img-src="https://via.placeholder.com/1280x720/FFE5E5/FFFFFF?text=Thumbnail+1" data-description="썸네일 제작 1 - 상세 설명"><img src="https://via.placeholder.com/400x225/FFE5E5/FFFFFF?text=Thumbnail+1" alt="썸네일 1"><div class="portfolio-overlay"><div><h3>썸네일 제작 1</h3><p>클릭하여 크게 보기</p></div></div></div>
+                <div class="portfolio-item thumbnail" data-img-src="https://via.placeholder.com/1280x720/FFE5E5/FFFFFF?text=Thumbnail+2" data-description="썸네일 제작 2 - 상세 설명"><img src="https://via.placeholder.com/400x225/FFE5E5/FFFFFF?text=Thumbnail+2" alt="썸네일 2"><div class="portfolio-overlay"><div><h3>썸네일 제작 2</h3><p>클릭하여 크게 보기</p></div></div></div>
+                <div class="portfolio-item thumbnail" data-img-src="https://via.placeholder.com/1280x720/FFE5E5/FFFFFF?text=Thumbnail+3" data-description="썸네일 제작 3 - 상세 설명"><img src="https://via.placeholder.com/400x225/FFE5E5/FFFFFF?text=Thumbnail+3" alt="썸네일 3"><div class="portfolio-overlay"><div><h3>썸네일 제작 3</h3><p>클릭하여 크게 보기</p></div></div></div>
+                <div class="portfolio-item thumbnail" data-img-src="https://via.placeholder.com/1280x720/FFE5E5/FFFFFF?text=Thumbnail+4" data-description="썸네일 제작 4 - 상세 설명"><img src="https://via.placeholder.com/400x225/FFE5E5/FFFFFF?text=Thumbnail+4" alt="썸네일 4"><div class="portfolio-overlay"><div><h3>썸네일 제작 4</h3><p>클릭하여 크게 보기</p></div></div></div>
+                <div class="portfolio-item thumbnail" data-img-src="https://via.placeholder.com/1280x720/FFE5E5/FFFFFF?text=Thumbnail+5" data-description="썸네일 제작 5 - 상세 설명"><img src="https://via.placeholder.com/400x225/FFE5E5/FFFFFF?text=Thumbnail+5" alt="썸네일 5"><div class="portfolio-overlay"><div><h3>썸네일 제작 5</h3><p>클릭하여 크게 보기</p></div></div></div>
+                <div class="portfolio-item thumbnail" data-img-src="https://via.placeholder.com/1280x720/FFE5E5/FFFFFF?text=Thumbnail+6" data-description="썸네일 제작 6 - 상세 설명"><img src="https://via.placeholder.com/400x225/FFE5E5/FFFFFF?text=Thumbnail+6" alt="썸네일 6"><div class="portfolio-overlay"><div><h3>썸네일 제작 6</h3><p>클릭하여 크게 보기</p></div></div></div>
+            </div>
+            <div class="load-more-container">
+                <button id="load-more-btn" class="btn">더보기</button>
             </div>
         </section>
         
@@ -185,6 +192,15 @@
     </main>
 
     <footer><p>&copy; 2025 Jung Yunhee. All Rights Reserved.</p></footer>
+
+    <!-- 상세 보기 모달(팝업) -->
+    <div id="detail-modal" class="modal-bg">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img src="" alt="상세 이미지" class="modal-img">
+            <p class="modal-description"></p>
+        </div>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -224,24 +240,79 @@
 
             const filterBtns = document.querySelectorAll('.filter-btn');
             const portfolioItems = document.querySelectorAll('.portfolio-item');
-            
-            const filterItems = (filter) => {
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            let currentFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+            const itemsPerLoad = 4;
+
+            const showItems = (filter) => {
+                let count = 0;
                 portfolioItems.forEach(item => {
-                    if (item.classList.contains(filter)) {
+                    const isCategoryMatch = item.classList.contains(filter);
+                    if (isCategoryMatch && count < itemsPerLoad) {
                         item.classList.remove('hidden');
+                        count++;
                     } else {
                         item.classList.add('hidden');
                     }
                 });
+                updateLoadMoreButton(filter);
+            };
+            
+            const updateLoadMoreButton = (filter) => {
+                const hiddenItems = document.querySelectorAll(`.portfolio-item.${filter}.hidden`);
+                if (hiddenItems.length > 0) {
+                    loadMoreBtn.classList.remove('hidden');
+                } else {
+                    loadMoreBtn.classList.add('hidden');
+                }
             };
 
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     filterBtns.forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
-                    const currentFilter = btn.getAttribute('data-filter');
-                    filterItems(currentFilter);
+                    currentFilter = btn.getAttribute('data-filter');
+                    showItems(currentFilter);
                 });
+            });
+
+            loadMoreBtn.addEventListener('click', () => {
+                const hiddenItems = document.querySelectorAll(`.portfolio-item.${currentFilter}.hidden`);
+                let count = 0;
+                hiddenItems.forEach(item => {
+                    if (count < itemsPerLoad) {
+                        item.classList.remove('hidden');
+                        count++;
+                    }
+                });
+                updateLoadMoreButton(currentFilter);
+            });
+
+            const modal = document.getElementById('detail-modal');
+            const closeBtn = modal.querySelector('.close-btn');
+            const modalImg = modal.querySelector('.modal-img');
+            const modalDescription = modal.querySelector('.modal-description');
+
+            portfolioItems.forEach(item => {
+                if (item.classList.contains('thumbnail')) {
+                    item.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const imgSrc = item.getAttribute('data-img-src');
+                        const description = item.getAttribute('data-description');
+                        modalImg.src = imgSrc;
+                        modalDescription.textContent = description || '';
+                        modal.style.display = 'flex';
+                    });
+                }
+            });
+
+            const closeModal = () => {
+                modal.style.display = 'none';
+                modalImg.src = '';
+            }
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
             });
 
             const contactForm = document.getElementById('contact-form');
@@ -268,9 +339,9 @@
                 contactForm.addEventListener("submit", handleSubmit);
             }
             
-            // 페이지 로드 시 첫 번째 필터(영상 제작)를 활성화합니다.
-            filterItems('video');
+            showItems(currentFilter);
         });
     </script>
 </body>
 </html>
+
