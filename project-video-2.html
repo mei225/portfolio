@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ↓↓↓ 이 페이지의 대표 제목으로 수정하세요. ↓↓↓ -->
-    <title>MBC경남 밀톡2</title>
+    <title>MBC경남 밀톡2 - 정윤희 포트폴리오</title>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <style>
         /* CSS 코드는 여기에 포함됩니다. */
@@ -43,12 +42,23 @@
             line-height: 1.7;
         }
 
-        /* 비디오 갤러리 */
+        /* 갤러리 컨테이너 */
         .gallery-container {
             max-width: 1100px;
             margin: 40px auto;
             padding: 0 20px;
         }
+        
+        /* 소제목 스타일 */
+        .sub-section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        /* 비디오 갤러리 */
         .video-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -104,9 +114,27 @@
             display: none;
         }
 
+        /* 포스터 섹션 */
+        .poster-section {
+            margin-top: 60px;
+        }
+        .poster-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        .poster-item img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
         /* 반응형 */
         @media (max-width: 768px) {
             .video-grid {
+                grid-template-columns: 1fr;
+            }
+            .poster-grid {
                 grid-template-columns: 1fr;
             }
             .page-header h1 {
@@ -126,7 +154,6 @@
     <main>
         <!-- ======== 페이지 상단 헤더 ======== -->
         <div class="page-header">
-            <!-- ↓↓↓ 1. 이 페이지의 대표 제목과 설명을 수정하세요. ↓↓↓ -->
             <h1>MBC경남 밀톡2</h1>
             <p>
                 MBC경남 밀톡2 TV프로그램 및 유튜브 프로젝트입니다.<br>
@@ -134,125 +161,38 @@
             </p>
         </div>
 
-        <!-- ======== 비디오 갤러리 ======== -->
+        <!-- ======== 비디오/포스터 갤러리 ======== -->
         <div class="gallery-container">
-            <div class="video-grid">
-                <!-- ↓↓↓ 2. 10개의 비디오 정보를 수정하세요. ↓↓↓ -->
-
-                <!-- 비디오 1 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/sr0FrVedS84" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>밀톡2 1화 군함(1부)</h3>
-                        <p>영상 편집</p>
-                    </div>
+            
+            <!-- 본영상 편집 섹션 -->
+            <div class="video-section">
+                <h2 class="sub-section-title">밀톡2 본영상 편집</h2>
+                <div class="video-grid">
+                    <!-- 8개의 비디오 정보 -->
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/sr0FrVedS84" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>밀톡2 1화 군함(1부)</h3><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/9BqBnzvcs6g" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>밀톡2 1화 군함(2부)</h3><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/ca7PhebLylo" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>밀톡2 2화 전투기</h3><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/cLjup4R2C-g" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>밀톡2 3화 위성</h3><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/evHtJTrJkG8" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>밀톡2 4화 총과 포</h3><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/x0HeIojJy2k" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>밀톡2 5화 무인기</h3><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/98PpJ1FW1Bg" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>밀톡2 6화 항공모함</h3><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/-Wn0ole_O9M" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>밀톡2 7화 미사일</h3><p>영상 편집</p></div></div>
                 </div>
-
-                <!-- 비디오 2 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/9BqBnzvcs6g" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>밀톡2 1화 군함(2부)</h3>
-                        <p>영상 편집</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 3 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/ca7PhebLylo" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>밀톡2 2화 전투기</h3>
-                        <p>영상 편집</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 4 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/cLjup4R2C-g" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>밀톡2 3화 위성</h3>
-                        <p>영상 편집</p>
-                    </div>
-                </div>
-                
-                <!-- 비디오 5 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/evHtJTrJkG8" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>밀톡2 4화 총과 포</h3>
-                        <p>영상 편집</p>
-                    </div>
-                </div>
-                
-                <!-- 비디오 6 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/x0HeIojJy2k" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>밀톡2 5화 무인기</h3>
-                        <p>영상 편집</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 7 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/98PpJ1FW1Bg" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>밀톡2 6화 항공모함</h3>
-                        <p>영상 편집</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 8 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/-Wn0ole_O9M" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>밀톡2 7화 미사일</h3>
-                        <p>영상 편집</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 9 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/placeholder9" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>프로젝트 제목 9</h3>
-                        <p>프로젝트 설명 9</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 10 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/placeholder10" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>프로젝트 제목 10</h3>
-                        <p>프로젝트 설명 10</p>
-                    </div>
+                <div class="load-more-container">
+                    <button id="load-more-btn" class="btn">더보기</button>
                 </div>
             </div>
 
-            <div class="load-more-container">
-                <button id="load-more-btn" class="btn">더보기</button>
+            <!-- 포스터 촬영 섹션 -->
+            <div class="poster-section">
+                <h2 class="sub-section-title">밀톡2 포스터 촬영</h2>
+                <div class="poster-grid">
+                    <div class="poster-item"><img src="./1.jpg"></div>
+                    <div class="poster-item"><img src="./2.jpg"></div>
+                    <div class="poster-item"><img src="./3.jpg"></div>
+                </div>
             </div>
+
         </div>
     </main>
 
@@ -263,7 +203,6 @@
             const itemsPerLoad = 4;
             let visibleItems = itemsPerLoad;
 
-            // 초기에 보여줄 아이템 외에는 숨김
             const updateVisibility = () => {
                 videoItems.forEach((item, index) => {
                     if (index < visibleItems) {
@@ -273,7 +212,6 @@
                     }
                 });
 
-                // 모든 아이템이 보이면 더보기 버튼 숨김
                 if (visibleItems >= videoItems.length) {
                     loadMoreBtn.classList.add('hidden');
                 } else {
@@ -281,13 +219,11 @@
                 }
             };
             
-            // 더보기 버튼 클릭 이벤트
             loadMoreBtn.addEventListener('click', () => {
                 visibleItems += itemsPerLoad;
                 updateVisibility();
             });
 
-            // 페이지 로드 시 초기 상태 설정
             updateVisibility();
         });
     </script>
