@@ -161,7 +161,8 @@
                     <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/WptlIIUMzX0" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>도깨비 야시장 작은 콘서트 2</h3><p>롱폼, 영상 편집</p></div></div>
                 </div>
                 <div class="load-more-container">
-                    <button id="load-more-event" class="btn">더보기</button>
+                    <button id="load-more-event" class="btn load-more-btn">더보기</button>
+                </div>
             </div>
 
             <!-- 홍보 영상 섹션 -->
@@ -201,7 +202,7 @@
                     <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/qIaHJJINbFY" frameborder="0" allowfullscreen></iframe></div></div>
                 </div>
                 <div class="load-more-container">
-                    <button id="load-more-promo" class="btn">더보기</button>
+                    <button id="load-more-promo" class="btn load-more-btn">더보기</button>
                 </div>
             </div>
 
@@ -212,9 +213,11 @@
                     <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/uTUJIqM6Thg" frameborder="0" allowfullscreen></iframe></div></div>
                     <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/fCV2L4YNPuQ" frameborder="0" allowfullscreen></iframe></div></div>
                     <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/VsYAZfmKXrg" frameborder="0" allowfullscreen></iframe></div></div>
-                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/JK_NfGzoclw" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/JK_Nf9Gzoclw" frameborder="0" allowfullscreen></iframe></div></div>
                 </div>
-                <!-- 이모카세 영상 더보기 버튼은 필요 시 여기에 추가 -->
+                <div class="load-more-container">
+                    <button id="load-more-imokase" class="btn load-more-btn">더보기</button>
+                </div>
             </div>
 
         </div>
@@ -223,33 +226,26 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             
-            // 더보기 기능을 처리하는 함수
-            function setupLoadMore(sectionId, buttonId) {
+            function setupLoadMore(sectionId) {
                 const section = document.getElementById(sectionId);
                 if (!section) return;
 
                 const videoItems = section.querySelectorAll('.video-item');
-                const loadMoreBtn = section.querySelector(buttonId);
+                const loadMoreBtn = section.querySelector('.load-more-btn');
                 const itemsPerLoad = 4;
                 let visibleItems = itemsPerLoad;
 
                 const updateVisibility = () => {
                     videoItems.forEach((item, index) => {
-                        if (index < visibleItems) {
-                            item.classList.remove('hidden');
-                        } else {
-                            item.classList.add('hidden');
-                        }
+                        item.classList.toggle('hidden', index >= visibleItems);
                     });
 
-                    if (visibleItems >= videoItems.length) {
-                        if(loadMoreBtn) loadMoreBtn.classList.add('hidden');
-                    } else {
-                        if(loadMoreBtn) loadMoreBtn.classList.remove('hidden');
+                    if (loadMoreBtn) {
+                        loadMoreBtn.classList.toggle('hidden', visibleItems >= videoItems.length);
                     }
                 };
                 
-                if(loadMoreBtn) {
+                if (loadMoreBtn) {
                     loadMoreBtn.addEventListener('click', () => {
                         visibleItems += itemsPerLoad;
                         updateVisibility();
@@ -260,12 +256,9 @@
             }
 
             // 각 섹션에 더보기 기능 적용
-            setupLoadMore('promo-section', '#load-more-promo');
-            setupLoadMore('event-section', '#load-more-event');
-            // 행사, 이모카세 영상은 4개 이하이므로 더보기 버튼이 필요 없지만,
-            // 만약 4개 이상이 될 경우를 대비해 아래와 같이 추가할 수 있습니다.
-            // setupLoadMore('event-section', '#load-more-event');
-            // setupLoadMore('imokase-section', '#load-more-imokase');
+            setupLoadMore('event-section');
+            setupLoadMore('promo-section');
+            setupLoadMore('imokase-section');
         });
     </script>
 </body>
