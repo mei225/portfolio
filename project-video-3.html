@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ↓↓↓ 이 페이지의 대표 제목으로 수정하세요. ↓↓↓ -->
-    <title>양산남부시장 공식 유튜브 영상 편집</title>
+    <title>양산남부시장 공식 유튜브 - 정윤희 포트폴리오</title>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <style>
         /* CSS 코드는 여기에 포함됩니다. */
@@ -43,12 +42,28 @@
             line-height: 1.7;
         }
 
-        /* 비디오 갤러리 */
+        /* 갤러리 컨테이너 */
         .gallery-container {
             max-width: 1100px;
             margin: 40px auto;
             padding: 0 20px;
         }
+        
+        /* 섹션 스타일 */
+        .video-section {
+            margin-bottom: 60px;
+        }
+
+        /* 소제목 스타일 */
+        .sub-section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        /* 비디오 갤러리 */
         .video-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -100,7 +115,7 @@
             margin-top: 40px;
             padding-bottom: 40px;
         }
-        #load-more-btn.hidden {
+        .load-more-btn.hidden {
             display: none;
         }
 
@@ -124,171 +139,133 @@
     </header>
 
     <main>
-        <!-- ======== 페이지 상단 헤더 ======== -->
         <div class="page-header">
-            <!-- ↓↓↓ 1. 이 페이지의 대표 제목과 설명을 수정하세요. ↓↓↓ -->
-            <h1>양산남부시장 공식 유튜브 영상 편집</h1>
+            <h1>양산남부시장 공식 유튜브</h1>
             <p>
-                양산남부시장 공식 유튜브 영상 프로젝트입니다.<br>
-                유튜브 콘텐츠에 맞는 최적의 결과물을 확인해보세요.
+                양산남부시장 공식 유튜브 채널의 다양한 영상 프로젝트입니다.<br>
+                행사 스케치, 홍보 영상, '이모카세' 시리즈 등 다채로운 콘텐츠를 확인해보세요.
             </p>
         </div>
 
-        <!-- ======== 비디오 갤러리 ======== -->
         <div class="gallery-container">
-            <div class="video-grid">
-                <!-- ↓↓↓ 2. 10개의 비디오 정보를 수정하세요. ↓↓↓ -->
+            
+            <!-- 행사 영상 섹션 -->
+            <div id="event-section" class="video-section">
+                <h2 class="sub-section-title">양산남부시장 행사 영상</h2>
+                <div class="video-grid">
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Iy5TmXl7I5U" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>도깨비 야시장</h3><p>롱폼, 영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/okV8nmmr1_I" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>양산남부시장 동행축제</h3><p>롱폼, 영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/OgYSdabhDt0" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>어린이장보기체험</h3><p>롱폼, 영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/n0XCYpHIkXY" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>양산남부시장 TOP 5</h3><p>롱폼, 영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/4CN1QOdK_9c" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>도깨비 야시장 작은 콘서트 1</h3><p>롱폼, 영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/WptlIIUMzX0" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>도깨비 야시장 작은 콘서트 2</h3><p>롱폼, 영상 편집</p></div></div>
+                </div>
+                <div class="load-more-container">
+                    <button id="load-more-event" class="btn">더보기</button>
+            </div>
 
-                <!-- 비디오 1 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/Iy5TmXl7I5U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>도깨비 야시장</h3>
-                        <p>롱폼, 영상 편집</p>
-                    </div>
+            <!-- 홍보 영상 섹션 -->
+            <div id="promo-section" class="video-section">
+                <h2 class="sub-section-title">양산남부시장 홍보 영상</h2>
+                <div class="video-grid">
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/NPUfMaL4cl8" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/NMIbecehd9Q" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/N1u5EOiJdT8" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/athELTZAIK0" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/DRw6xsE2ui0" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/xEGJLfcWseM" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/-SwhOEjM-vU" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/OeyXUdcqGi4" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/JZZeaUEQhbc" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/6sA7air1H48" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/ANtIxl-W36k" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/dhqNET2UqaU" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Iu4pIYvj5ZA" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/XUyqeAvJAek" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/U8jxctL-uSc" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Y7tlbhfIRiU" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/hfLVKCfrKQg" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/W6dkLW-TK0I" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/hbyZPYpgWPM" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/pj0f9_n-3Ps" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/SeEyT4b-pCM" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/gOzQaRT7Be8" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/z0wF_qll8l4" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/k3yj_NuJz-Y" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/xGEl8j6ZkjA" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/GjN5zeEpRKU" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/fBLxvAVeSk0" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/ytYQMEMxLjY" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/O28o5HQj7qU" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/5mypSekqmnc" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/qIaHJJINbFY" frameborder="0" allowfullscreen></iframe></div></div>
                 </div>
-
-                <!-- 비디오 2 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/okV8nmmr1_I" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>양산남부시장 동행축제</h3>
-                        <p>롱폼, 영상 편집</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 3 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/OgYSdabhDt0" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>어린이장보기체험</h3>
-                        <p>롱폼, 영상 편집</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 4 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/n0XCYpHIkXY" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>양산남부시장 TOP 5</h3>
-                        <p>롱폼, 영상 편집</p>
-                    </div>
-                </div>
-                
-                <!-- 비디오 5 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/NPUfMaL4cl8" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>쌀굼터</h3>
-                        <p>롱폼, 영상 편집</p>
-                    </div>
-                </div>
-                
-                <!-- 비디오 6 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/placeholder6" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>프로젝트 제목 6</h3>
-                        <p>프로젝트 설명 6</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 7 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/placeholder7" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>프로젝트 제목 7</h3>
-                        <p>프로젝트 설명 7</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 8 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/placeholder8" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>프로젝트 제목 8</h3>
-                        <p>프로젝트 설명 8</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 9 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/placeholder9" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>프로젝트 제목 9</h3>
-                        <p>프로젝트 설명 9</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 10 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/placeholder10" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>프로젝트 제목 10</h3>
-                        <p>프로젝트 설명 10</p>
-                    </div>
+                <div class="load-more-container">
+                    <button id="load-more-promo" class="btn">더보기</button>
                 </div>
             </div>
 
-            <div class="load-more-container">
-                <button id="load-more-btn" class="btn">더보기</button>
+            <!-- 이모카세 영상 섹션 -->
+            <div id="imokase-section" class="video-section">
+                <h2 class="sub-section-title">양산남부시장 이모카세 영상</h2>
+                <div class="video-grid">
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/uTUJIqM6Thg" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/fCV2L4YNPuQ" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/VsYAZfmKXrg" frameborder="0" allowfullscreen></iframe></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/JK_NfGzoclw" frameborder="0" allowfullscreen></iframe></div></div>
+                </div>
+                <!-- 이모카세 영상 더보기 버튼은 필요 시 여기에 추가 -->
             </div>
+
         </div>
     </main>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const videoItems = document.querySelectorAll('.video-item');
-            const loadMoreBtn = document.getElementById('load-more-btn');
-            const itemsPerLoad = 4;
-            let visibleItems = itemsPerLoad;
-
-            // 초기에 보여줄 아이템 외에는 숨김
-            const updateVisibility = () => {
-                videoItems.forEach((item, index) => {
-                    if (index < visibleItems) {
-                        item.classList.remove('hidden');
-                    } else {
-                        item.classList.add('hidden');
-                    }
-                });
-
-                // 모든 아이템이 보이면 더보기 버튼 숨김
-                if (visibleItems >= videoItems.length) {
-                    loadMoreBtn.classList.add('hidden');
-                } else {
-                    loadMoreBtn.classList.remove('hidden');
-                }
-            };
             
-            // 더보기 버튼 클릭 이벤트
-            loadMoreBtn.addEventListener('click', () => {
-                visibleItems += itemsPerLoad;
-                updateVisibility();
-            });
+            // 더보기 기능을 처리하는 함수
+            function setupLoadMore(sectionId, buttonId) {
+                const section = document.getElementById(sectionId);
+                if (!section) return;
 
-            // 페이지 로드 시 초기 상태 설정
-            updateVisibility();
+                const videoItems = section.querySelectorAll('.video-item');
+                const loadMoreBtn = section.querySelector(buttonId);
+                const itemsPerLoad = 4;
+                let visibleItems = itemsPerLoad;
+
+                const updateVisibility = () => {
+                    videoItems.forEach((item, index) => {
+                        if (index < visibleItems) {
+                            item.classList.remove('hidden');
+                        } else {
+                            item.classList.add('hidden');
+                        }
+                    });
+
+                    if (visibleItems >= videoItems.length) {
+                        if(loadMoreBtn) loadMoreBtn.classList.add('hidden');
+                    } else {
+                        if(loadMoreBtn) loadMoreBtn.classList.remove('hidden');
+                    }
+                };
+                
+                if(loadMoreBtn) {
+                    loadMoreBtn.addEventListener('click', () => {
+                        visibleItems += itemsPerLoad;
+                        updateVisibility();
+                    });
+                }
+
+                updateVisibility();
+            }
+
+            // 각 섹션에 더보기 기능 적용
+            setupLoadMore('promo-section', '#load-more-promo');
+            setupLoadMore('event-section', '#load-more-event');
+            // 행사, 이모카세 영상은 4개 이하이므로 더보기 버튼이 필요 없지만,
+            // 만약 4개 이상이 될 경우를 대비해 아래와 같이 추가할 수 있습니다.
+            // setupLoadMore('event-section', '#load-more-event');
+            // setupLoadMore('imokase-section', '#load-more-imokase');
         });
     </script>
 </body>
