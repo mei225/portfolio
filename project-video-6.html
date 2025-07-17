@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ↓↓↓ 이 페이지의 대표 제목으로 수정하세요. ↓↓↓ -->
     <title>MBC경남 히든챔피언</title>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <style>
@@ -43,12 +42,28 @@
             line-height: 1.7;
         }
 
-        /* 비디오 갤러리 */
+        /* 갤러리 컨테이너 */
         .gallery-container {
             max-width: 1100px;
             margin: 40px auto;
-            padding: 0 20px;
+            padding: 0 20px 40px;
         }
+        
+        /* 섹션 스타일 */
+        .content-section {
+            margin-bottom: 60px;
+        }
+
+        /* 소제목 스타일 */
+        .sub-section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        /* 비디오 갤러리 */
         .video-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -98,15 +113,27 @@
         .load-more-container {
             text-align: center;
             margin-top: 40px;
-            padding-bottom: 40px;
         }
-        #load-more-btn.hidden {
+        .load-more-btn.hidden {
             display: none;
+        }
+
+        /* 로고/포스터 섹션 */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 이미지를 2열로 배치 */
+            gap: 25px;
+            align-items: center;
+        }
+        .image-item img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         /* 반응형 */
         @media (max-width: 768px) {
-            .video-grid {
+            .video-grid, .image-grid {
                 grid-template-columns: 1fr;
             }
             .page-header h1 {
@@ -126,168 +153,73 @@
     <main>
         <!-- ======== 페이지 상단 헤더 ======== -->
         <div class="page-header">
-            <!-- ↓↓↓ 1. 이 페이지의 대표 제목과 설명을 수정하세요. ↓↓↓ -->
             <h1>MBC경남 히든챔피언</h1>
             <p>
                 MBC경남 히든챔피언 TV프로그램 및 유튜브 프로젝트입니다.<br>
-                촬영부터 편집까지, 결과물을 확인해보세요.
+                촬영부터 편집, 로고 제작까지 다양한 결과물을 확인해보세요.
             </p>
         </div>
 
-        <!-- ======== 비디오 갤러리 ======== -->
+        <!-- ======== 갤러리 ======== -->
         <div class="gallery-container">
-            <div class="video-grid">
-                <!-- ↓↓↓ 2. 10개의 비디오 정보를 수정하세요. ↓↓↓ -->
-
-                <!-- 비디오 1 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/agIUih-b6r0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>히든챔피언 1화</h3>
-                        <p>영상 촬영 및 편집</p>
-                    </div>
+            
+            <!-- 본영상 편집 섹션 -->
+            <div id="video-section" class="content-section">
+                <h2 class="sub-section-title">히든챔피언 본영상 촬영 및 편집</h2>
+                <div class="video-grid">
+                    <!-- 10개의 비디오 정보 -->
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/agIUih-b6r0" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>히든챔피언 1화</h3><p>영상 촬영 및 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Q1gxgXT-o7Y" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>히든챔피언 2화</h3><p>영상 촬영 및 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/IMhMM1p2kjY" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>히든챔피언 3화</h3><p>영상 촬영 및 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/-EoIl5wySVc" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>히든챔피언 4화</h3><p>영상 촬영 및 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Q-AWJFZNduM" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>히든챔피언 5화</h3><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/EbeCFU5rk3o" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>히든챔피언 6화</h3><p>영상 촬영 및 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Wge-Fh2SdFI" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>히든챔피언 7화</h3><p>영상 촬영 및 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/aX7E4YiKBTU" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>히든챔피언 8화</h3><p>영상 촬영 및 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/x0DfA0Qu77E" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>히든챔피언 9화</h3><p>영상 촬영 및 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/xVtmG1aZePk" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><h3>히든챔피언 10화</h3><p>영상 촬영 및 편집</p></div></div>
                 </div>
-
-                <!-- 비디오 2 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/Q1gxgXT-o7Y" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>히든챔피언 2화</h3>
-                        <p>영상 촬영 및 편집</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 3 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/IMhMM1p2kjY" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>히든챔피언 3화</h3>
-                        <p>영상 촬영 및 편집</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 4 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/-EoIl5wySVc" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>히든챔피언 4화</h3>
-                        <p>영상 촬영 및 편집</p>
-                    </div>
-                </div>
-                
-                <!-- 비디오 5 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/Q-AWJFZNduM" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>히든챔피언 5화</h3>
-                        <p>영상 편집</p>
-                    </div>
-                </div>
-                
-                <!-- 비디오 6 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/EbeCFU5rk3o" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>히든챔피언 6화</h3>
-                        <p>영상 촬영 및 편집</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 7 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/Wge-Fh2SdFI" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>히든챔피언 7화</h3>
-                        <p>영상 촬영 및 편집</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 8 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/aX7E4YiKBTU" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>히든챔피언 8화</h3>
-                        <p>영상 촬영 및 편집</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 9 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/x0DfA0Qu77E" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>히든챔피언 9화</h3>
-                        <p>영상 촬영 및 편집</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 10 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/xVtmG1aZePk" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>히든챔피언 10화</h3>
-                        <p>영상 촬영 및 편집</p>
-                    </div>
+                <div class="load-more-container">
+                    <button id="load-more-btn" class="btn load-more-btn">더보기</button>
                 </div>
             </div>
 
-            <div class="load-more-container">
-                <button id="load-more-btn" class="btn">더보기</button>
+            <!-- 로고 제작 섹션 -->
+            <div class="content-section">
+                <h2 class="sub-section-title">히든챔피언 로고 제작</h2>
+                <div class="image-grid">
+                    <div class="image-item"><img src="./logo1.png" alt="로고 디자인 1"></div>
+                    <div class="image-item"><img src="./logo2.png" alt="로고 디자인 2"></div>
+                </div>
             </div>
         </div>
     </main>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const videoItems = document.querySelectorAll('.video-item');
-            const loadMoreBtn = document.getElementById('load-more-btn');
+            const videoSection = document.getElementById('video-section');
+            const videoItems = videoSection.querySelectorAll('.video-item');
+            const loadMoreBtn = videoSection.querySelector('#load-more-btn');
             const itemsPerLoad = 4;
             let visibleItems = itemsPerLoad;
 
-            // 초기에 보여줄 아이템 외에는 숨김
             const updateVisibility = () => {
                 videoItems.forEach((item, index) => {
-                    if (index < visibleItems) {
-                        item.classList.remove('hidden');
-                    } else {
-                        item.classList.add('hidden');
-                    }
+                    item.classList.toggle('hidden', index >= visibleItems);
                 });
 
-                // 모든 아이템이 보이면 더보기 버튼 숨김
-                if (visibleItems >= videoItems.length) {
-                    loadMoreBtn.classList.add('hidden');
-                } else {
-                    loadMoreBtn.classList.remove('hidden');
+                if (loadMoreBtn) {
+                    loadMoreBtn.classList.toggle('hidden', visibleItems >= videoItems.length);
                 }
             };
             
-            // 더보기 버튼 클릭 이벤트
-            loadMoreBtn.addEventListener('click', () => {
-                visibleItems += itemsPerLoad;
-                updateVisibility();
-            });
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', () => {
+                    visibleItems += itemsPerLoad;
+                    updateVisibility();
+                });
+            }
 
-            // 페이지 로드 시 초기 상태 설정
             updateVisibility();
         });
     </script>
