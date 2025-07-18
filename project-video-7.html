@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ↓↓↓ 이 페이지의 대표 제목으로 수정하세요. ↓↓↓ -->
-    <title>MBC경남 공식 유튜브 영상 촬영 및 편집</title>
+    <title>MBC경남 공식 유튜브</title>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <style>
         /* CSS 코드는 여기에 포함됩니다. */
@@ -43,12 +42,28 @@
             line-height: 1.7;
         }
 
-        /* 비디오 갤러리 */
+        /* 갤러리 컨테이너 */
         .gallery-container {
             max-width: 1100px;
             margin: 40px auto;
-            padding: 0 20px;
+            padding: 0 20px 40px;
         }
+        
+        /* 섹션 스타일 */
+        .content-section {
+            margin-bottom: 60px;
+        }
+
+        /* 소제목 스타일 */
+        .sub-section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        /* 비디오 갤러리 */
         .video-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -83,24 +98,24 @@
         }
         .video-info {
             padding: 20px;
-        }
-        .video-info h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 5px;
+            text-align: center;
+            min-height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .video-info p {
-            font-size: 0.95rem;
-            color: #777;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #555;
         }
 
         /* 더보기 버튼 */
         .load-more-container {
             text-align: center;
             margin-top: 40px;
-            padding-bottom: 40px;
         }
-        #load-more-btn.hidden {
+        .load-more-btn.hidden {
             display: none;
         }
 
@@ -124,171 +139,148 @@
     </header>
 
     <main>
-        <!-- ======== 페이지 상단 헤더 ======== -->
         <div class="page-header">
-            <!-- ↓↓↓ 1. 이 페이지의 대표 제목과 설명을 수정하세요. ↓↓↓ -->
-            <h1>MBC경남 공식 유튜브 영상 촬영 및 편집</h1>
+            <h1>MBC경남 공식 유튜브</h1>
             <p>
-                MBC경남 공식 유튜브 영상 프로젝트입니다.<br>
+                MBC경남 공식 유튜브 채널의 다양한 영상 프로젝트입니다.<br>
                 유튜브 콘텐츠에 맞는 최적의 결과물을 확인해보세요.
             </p>
         </div>
 
-        <!-- ======== 비디오 갤러리 ======== -->
         <div class="gallery-container">
-            <div class="video-grid">
-                <!-- ↓↓↓ 2. 10개의 비디오 정보를 수정하세요. ↓↓↓ -->
-
-                <!-- 비디오 1 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/NuKKnF-wAQo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>밀양시 우수도시 선정</h3>
-                        <p>클라이언트: 밀양시 / 역할: 영상 편집</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 2 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/XxriQ_PRv70" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>MBC경남 밀톡2</h3>
-                        <p>클라이언트: MBC경남 / 역할: TV 송출본 편집, 포스터 촬영</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 3 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/uTUJIqM6Thg" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>양산남부시장 시리즈</h3>
-                        <p>클라이언트: 양산남부시장 / 역할: 유튜브 콘텐츠 편집 (약 40편)</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 4 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/wM-8OQb7ktU" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>밀양시 관광지 소개</h3>
-                        <p>클라이언트: 밀양시 / 역할: 영상 촬영 및 편집</p>
-                    </div>
-                </div>
-                
-                <!-- 비디오 5 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/gaUOtSijat8" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>경남대학교 졸업생 특강</h3>
-                        <p>클라이언트: 경남대학교 / 역할: 영상 촬영 및 편집</p>
-                    </div>
-                </div>
-                
-                <!-- 비디오 6 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/placeholder6" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>프로젝트 제목 6</h3>
-                        <p>프로젝트 설명 6</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 7 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/placeholder7" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>프로젝트 제목 7</h3>
-                        <p>프로젝트 설명 7</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 8 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/placeholder8" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>프로젝트 제목 8</h3>
-                        <p>프로젝트 설명 8</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 9 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/placeholder9" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>프로젝트 제목 9</h3>
-                        <p>프로젝트 설명 9</p>
-                    </div>
-                </div>
-
-                <!-- 비디오 10 -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/placeholder10" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>프로젝트 제목 10</h3>
-                        <p>프로젝트 설명 10</p>
-                    </div>
+            
+            <div id="issue-talk-section" class="content-section">
+                <h2 class="sub-section-title">K-방산 이슈앤톡 시리즈</h2>
+                <div class="video-grid">
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/ZEGmpPz5gWo" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>촬영 및 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/vVHyXtusEwM" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>촬영 및 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Tnwj2Ytgs-4" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>촬영 및 편집</p></div></div>
                 </div>
             </div>
 
-            <div class="load-more-container">
-                <button id="load-more-btn" class="btn">더보기</button>
+            <div id="sports-section" class="content-section">
+                <h2 class="sub-section-title">스포츠 관련 시리즈</h2>
+                <div class="video-grid">
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Gzuxllz2y2s" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>구성, 촬영, 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/RZoZ1hK5A-0" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/r2aRimC4D2w" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 촬영</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/8vyrQ_ERjVY" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/uvLRoX_Az3s" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                </div>
+                <div class="load-more-container"><button class="btn load-more-btn">더보기</button></div>
+            </div>
+
+            <div id="promo-spot-section" class="content-section">
+                <h2 class="sub-section-title">TV 홍보 스팟</h2>
+                <div class="video-grid">
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/NnVc4KF9cR0" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/qo13vxe_rYY" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/j9YdlLRV-_Q" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                </div>
+            </div>
+
+            <div id="trailer-section" class="content-section">
+                <h2 class="sub-section-title">예고편</h2>
+                <div class="video-grid">
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/XxriQ_PRv70" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/4ucoKv9eO44" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/DED_OrvqCb4" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                </div>
+            </div>
+
+            <div id="news-report-section" class="content-section">
+                <h2 class="sub-section-title">TV 뉴스 리포트 영상</h2>
+                <div class="video-grid">
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/c2AMwa35Px0" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Gk0lhFbuIvY" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                </div>
+            </div>
+
+            <div id="k-defense-section" class="content-section">
+                <h2 class="sub-section-title">K-방산 시리즈</h2>
+                <div class="video-grid">
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/NdNtwjgGyDs" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Y5hNHhOaO3g" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/JJfv0eLt9M0" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/oJPh3E9Rv0Y" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Rf4wLqBvmXI" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/__4fKquGKAM" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/O1F1Dggb7ic" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/YvrjthOMu6U" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/HoqDG8BV4po" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/hMFuYuXJnUg" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/z4wOdR8Aw-0" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/rbsKu_ArBeM" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                </div>
+                <div class="load-more-container"><button class="btn load-more-btn">더보기</button></div>
+            </div>
+
+            <div id="k-shipbuilding-section" class="content-section">
+                <h2 class="sub-section-title">K-조선 시리즈</h2>
+                <div class="video-grid">
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/zZccMsfNVsY" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>영상 편집</p></div></div>
+                </div>
+            </div>
+
+            <div id="others-section" class="content-section">
+                <h2 class="sub-section-title">그 외 여러 콘텐츠들</h2>
+                <div class="video-grid">
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/-DXA_Er3GAQ" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>현장 영상, 영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/3shke6pEJG0" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>현장 영상, 영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/T5SZz2V8t8A" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>현장 영상, 영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/46cUMc6oKyM" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>현장 영상, 영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/sHWJQoTEqoM" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>현장 영상, 영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/wbdutuBmKuc" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>현장 영상, 영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/9I6FApODa1I" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>현장 영상, 영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/IHCyQ-DoZKY" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>브이로그, 영상 편집</p></div></div>
+                    <div class="video-item"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/-pCk9otJqnM" frameborder="0" allowfullscreen></iframe></div><div class="video-info"><p>지금 이 뉴스, 영상 편집</p></div></div>
+                </div>
+                <div class="load-more-container"><button class="btn load-more-btn">더보기</button></div>
             </div>
         </div>
     </main>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const videoItems = document.querySelectorAll('.video-item');
-            const loadMoreBtn = document.getElementById('load-more-btn');
-            const itemsPerLoad = 4;
-            let visibleItems = itemsPerLoad;
-
-            // 초기에 보여줄 아이템 외에는 숨김
-            const updateVisibility = () => {
-                videoItems.forEach((item, index) => {
-                    if (index < visibleItems) {
-                        item.classList.remove('hidden');
-                    } else {
-                        item.classList.add('hidden');
-                    }
-                });
-
-                // 모든 아이템이 보이면 더보기 버튼 숨김
-                if (visibleItems >= videoItems.length) {
-                    loadMoreBtn.classList.add('hidden');
-                } else {
-                    loadMoreBtn.classList.remove('hidden');
-                }
-            };
             
-            // 더보기 버튼 클릭 이벤트
-            loadMoreBtn.addEventListener('click', () => {
-                visibleItems += itemsPerLoad;
-                updateVisibility();
-            });
+            function setupLoadMore(sectionId) {
+                const section = document.getElementById(sectionId);
+                if (!section) return;
 
-            // 페이지 로드 시 초기 상태 설정
-            updateVisibility();
+                const videoItems = section.querySelectorAll('.video-item');
+                const loadMoreBtn = section.querySelector('.load-more-btn');
+                const itemsPerLoad = 4;
+                let visibleItems = itemsPerLoad;
+
+                const updateVisibility = () => {
+                    videoItems.forEach((item, index) => {
+                        item.classList.toggle('hidden', index >= visibleItems);
+                    });
+
+                    if (loadMoreBtn) {
+                        loadMoreBtn.classList.toggle('hidden', visibleItems >= videoItems.length);
+                    }
+                };
+                
+                if (loadMoreBtn) {
+                    loadMoreBtn.addEventListener('click', () => {
+                        visibleItems += itemsPerLoad;
+                        updateVisibility();
+                    });
+                }
+
+                updateVisibility();
+            }
+
+            // 각 섹션 ID에 더보기 기능 적용
+            setupLoadMore('issue-talk-section');
+            setupLoadMore('sports-section');
+            setupLoadMore('promo-spot-section');
+            setupLoadMore('trailer-section');
+            setupLoadMore('news-report-section');
+            setupLoadMore('k-defense-section');
+            setupLoadMore('k-shipbuilding-section');
+            setupLoadMore('others-section');
         });
     </script>
 </body>
