@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>히든챔피언 자막 패키지 - 정윤희 포트폴리오</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        /* CSS 코드는 여기에 포함됩니다. */
+        :root {
+            --primary-color: #345DA8; /* 히든챔피언 메인 컬러 */
+            --text-color: #333;
+            --light-gray-color: #f9f9f9;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Pretendard', sans-serif; color: var(--text-color); background-color: var(--light-gray-color); }
+        .btn { display: inline-block; background-color: var(--primary-color); color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: 500; transition: background-color 0.3s ease; border: none; cursor: pointer; }
+        .btn:hover { background-color: #2a4a87; }
+        
+        /* 헤더 */
+        header { background-color: rgba(255, 255, 255, 0.9); box-shadow: 0 2px 5px rgba(0,0,0,0.1); backdrop-filter: blur(5px); }
+        header nav { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .logo a { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: var(--text-color); }
+
+        /* 페이지 컨테이너 */
+        .project-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        /* 프로젝트 개요 */
+        .project-overview {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+        .project-overview h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .project-overview .description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            text-align: center;
+        }
+
+        /* 디자인 컨셉 & 상세 섹션 */
+        .content-section {
+            margin-bottom: 50px;
+        }
+        .content-section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        /* 디자인 컨셉 */
+        .concept-item h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .color-palette {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+        .color-sample {
+            text-align: center;
+        }
+        .color-chip {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            margin-bottom: 10px;
+        }
+        .color-sample span {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        .color-info {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .color-info p {
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        /* 자막 이미지 그리드 */
+        .image-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr;
+        }
+        .image-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .image-item .caption {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            color: white;
+            padding: 20px 15px 10px;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        /* 목록으로 버튼 */
+        .back-to-list { text-align: center; margin-top: 40px; }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .project-container { padding: 30px 20px; margin: 20px auto; }
+            .project-overview h1 { font-size: 2.2rem; }
+            .image-grid { grid-template-columns: 1fr; }
+            .color-info { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Jung Yunhee</a></div>
+            <a href="index.html#portfolio" class="btn">목록으로</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="project-container">
+            
+            <section class="project-overview">
+                <h1>히든챔피언 자막 패키지</h1>
+                <p class="description">
+                    경남의 방산 중견, 중소기업을 찾아가는 예능 느낌의 영상 제작을 위한 자막 패키지입니다.
+                </p>
+            </section>
+
+            <section class="content-section">
+                <h2>디자인 컨셉</h2>
+                <div class="concept-item">
+                    <h3>Color Palette</h3>
+                    <div class="color-info">
+                        <div class="color-palette">
+                            <div class="color-sample">
+                                <div class="color-chip" style="background-color: #345DA8;"></div>
+                                <span>#345DA8</span>
+                            </div>
+                            <div class="color-sample">
+                                <div class="color-chip" style="background-color: #F6CC1E;"></div>
+                                <span>#F6CC1E</span>
+                            </div>
+                             <div class="color-sample">
+                                <div class="color-chip" style="background-color: #E71F1A;"></div>
+                                <span>#E71F1A</span>
+                            </div>
+                        </div>
+                        <p>신뢰감을 주는 파란색을 메인으로, 재미와 주목도를 높이는 노란색과 빨간색을 포인트 컬러로 사용하여 정보와 예능적 재미를 동시에 전달하고자 했습니다.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>자막 패키지 상세</h2>
+                <div class="image-grid">
+                    <div class="image-item">
+                        <img src="./hidden1.png" alt="상단 타이틀">
+                        <div class="caption">상단 타이틀</div>
+                    </div>
+                    <div class="image-item">
+                        <img src="./hidden2.png" alt="출처 자막">
+                        <div class="caption">출처 자막</div>
+                    </div>
+                    <div class="image-item">
+                        <img src="./hidden3.png" alt="기본 두 줄 자막 1">
+                        <div class="caption">기본 두 줄 자막 (Style 1)</div>
+                    </div>
+                     <div class="image-item">
+                        <img src="./hidden4.png" alt="기본 두 줄 자막 2">
+                        <div class="caption">기본 두 줄 자막 (Style 2)</div>
+                    </div>
+                    <div class="image-item">
+                        <img src="./hidden5.png" alt="박스 강조 자막">
+                        <div class="caption">박스 강조 자막</div>
+                    </div>
+                    <div class="image-item">
+                        <img src="./hidden6.png" alt="말자막">
+                        <div class="caption">말자막</div>
+                    </div>
+                    <div class="image-item">
+                        <img src="./hidden7.png" alt="Q 자막">
+                        <div class="caption">Q 자막</div>
+                    </div>
+                    <div class="image-item">
+                        <img src="./hidden8.png" alt="상태/효과음 자막">
+                        <div class="caption">상태/효과음 자막</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="back-to-list">
+                <a href="index.html#portfolio" class="btn">포트폴리오 목록으로</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
