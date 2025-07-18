@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>히든챔피언 자막 패키지 - 정윤희 포트폴리오</title>
+    <title>히든챔피언 자막 패키지</title>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <style>
         /* CSS 코드는 여기에 포함됩니다. */
@@ -62,6 +62,18 @@
             padding-bottom: 10px;
             border-bottom: 2px solid #f0f0f0;
         }
+        
+        .subtitle-type-section {
+            margin-bottom: 40px;
+        }
+        .subtitle-type-section:last-child {
+            margin-bottom: 0;
+        }
+        .subtitle-type-section h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
 
         /* 디자인 컨셉 */
         .concept-item h3 {
@@ -100,17 +112,22 @@
             flex: 1;
         }
 
+        /* === CSS 수정됨 === */
         /* 자막 이미지 그리드 */
         .image-grid {
             display: grid;
-            gap: 20px;
+            gap: 30px; /* 여백 조정 */
             grid-template-columns: 1fr 1fr;
+            align-items: start;
+        }
+        .image-block { /* 이미지와 캡션을 묶는 새 컨테이너 */
+            text-align: center;
         }
         .image-item {
-            position: relative;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 12px; /* 이미지와 캡션 사이 간격 */
         }
         .image-item img {
             width: 100%;
@@ -118,15 +135,32 @@
             object-fit: cover;
             display: block;
         }
-        .image-item .caption {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-            color: white;
-            padding: 20px 15px 10px;
+        .image-caption { /* 캡션 스타일 */
             font-weight: 600;
-            text-align: left;
+            color: #555;
+            font-size: 1rem;
+        }
+        
+        .video-showcase-section {
+            background-color: var(--light-gray-color);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .video-showcase-section h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .video-showcase-section p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .video-showcase-section .video-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
         }
 
         /* 목록으로 버튼 */
@@ -185,44 +219,70 @@
 
             <section class="content-section">
                 <h2>자막 패키지 상세</h2>
-                <div class="image-grid">
-                    <div class="image-item">
-                        <img src="./hidden1.png" alt="상단 타이틀">
-                        <div class="caption">상단 타이틀</div>
+                
+                <div class="video-showcase-section">
+                    <h3>실제 적용 영상</h3>
+                    <p>이 자막 패키지가 실제로 적용된 '히든챔피언' 영상을 통해 디자인의 완성도를 확인해보세요.</p>
+                    <a href="https://www.youtube.com/watch?v=Q-AWJFZNduM" target="_blank" class="btn video-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        유튜브에서 영상 보기
+                    </a>
+                </div>
+
+                <!-- === HTML 구조 수정됨 === -->
+                <div class="subtitle-type-section">
+                    <h3>정보 전달 자막</h3>
+                    <div class="image-grid">
+                        <div class="image-block">
+                            <div class="image-item"><img src="./hidden1.png" alt="상단 타이틀"></div>
+                            <div class="image-caption">상단 타이틀</div>
+                        </div>
+                        <div class="image-block">
+                            <div class="image-item"><img src="./hidden2.png" alt="출처 자막"></div>
+                            <div class="image-caption">출처 자막</div>
+                        </div>
                     </div>
-                    <div class="image-item">
-                        <img src="./hidden2.png" alt="출처 자막">
-                        <div class="caption">출처 자막</div>
+                </div>
+
+                <div class="subtitle-type-section">
+                    <h3>대화 및 강조 자막</h3>
+                    <div class="image-grid">
+                        <div class="image-block">
+                            <div class="image-item"><img src="./hidden3.png" alt="기본 두 줄 자막 1"></div>
+                            <div class="image-caption">기본 두 줄 자막 (Style 1)</div>
+                        </div>
+                         <div class="image-block">
+                            <div class="image-item"><img src="./hidden4.png" alt="기본 두 줄 자막 2"></div>
+                            <div class="image-caption">기본 두 줄 자막 (Style 2)</div>
+                        </div>
+                        <div class="image-block">
+                            <div class="image-item"><img src="./hidden5.png" alt="박스 강조 자막"></div>
+                            <div class="image-caption">박스 강조 자막</div>
+                        </div>
+                        <div class="image-block">
+                            <div class="image-item"><img src="./hidden6.png" alt="말자막"></div>
+                            <div class="image-caption">말자막</div>
+                        </div>
                     </div>
-                    <div class="image-item">
-                        <img src="./hidden3.png" alt="기본 두 줄 자막 1">
-                        <div class="caption">기본 두 줄 자막 (Style 1)</div>
-                    </div>
-                     <div class="image-item">
-                        <img src="./hidden4.png" alt="기본 두 줄 자막 2">
-                        <div class="caption">기본 두 줄 자막 (Style 2)</div>
-                    </div>
-                    <div class="image-item">
-                        <img src="./hidden5.png" alt="박스 강조 자막">
-                        <div class="caption">박스 강조 자막</div>
-                    </div>
-                    <div class="image-item">
-                        <img src="./hidden6.png" alt="말자막">
-                        <div class="caption">말자막</div>
-                    </div>
-                    <div class="image-item">
-                        <img src="./hidden7.png" alt="Q 자막">
-                        <div class="caption">Q 자막</div>
-                    </div>
-                    <div class="image-item">
-                        <img src="./hidden8.png" alt="상태/효과음 자막">
-                        <div class="caption">상태/효과음 자막</div>
+                </div>
+
+                <div class="subtitle-type-section">
+                    <h3>특수 목적 자막</h3>
+                    <div class="image-grid">
+                        <div class="image-block">
+                            <div class="image-item"><img src="./hidden7.png" alt="Q자막"></div>
+                            <div class="image-caption">Q자막</div>
+                        </div>
+                        <div class="image-block">
+                            <div class="image-item"><img src="./hidden8.png" alt="상태/효과음 자막"></div>
+                            <div class="image-caption">상태/효과음 자막</div>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <div class="back-to-list">
-                <a href="index.html#portfolio" class="btn">포트폴리오 목록으로</a>
+                <a href="index.html#portfolio" class="btn">목록으로</a>
             </div>
         </div>
     </main>
