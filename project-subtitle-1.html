@@ -141,6 +141,29 @@
             display: block;
         }
 
+        /* 비디오 쇼케이스 섹션 */
+        .video-showcase-section {
+            background-color: var(--light-gray-color);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .video-showcase-section h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .video-showcase-section p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .video-showcase-section .video-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
         /* 목록으로 버튼 */
         .back-to-list { text-align: center; margin-top: 40px; }
 
@@ -164,7 +187,6 @@
     <main>
         <div class="project-container">
             
-            <!-- 1. 프로젝트 개요 -->
             <section class="project-overview">
                 <h1>가을 산책 자막 패키지</h1>
                 <div class="key-info">
@@ -176,7 +198,6 @@
                 </p>
             </section>
 
-            <!-- 2. 디자인 컨셉 -->
             <section class="content-section">
                 <h2>디자인 컨셉</h2>
                 <div class="concept-details">
@@ -199,42 +220,34 @@
                 </div>
             </section>
 
-            <!-- 3. 자막 패키지 상세 -->
             <section class="content-section">
                 <h2>자막 패키지 상세</h2>
+
+                <div class="video-showcase-section">
+                    <h3>실제 적용 영상</h3>
+                    <p>이 자막 패키지가 실제로 적용된 영상을 통해 디자인의 완성도를 확인해보세요.</p>
+                    <a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank" class="btn video-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        유튜브에서 영상 보기
+                    </a>
+                </div>
                 
                 <div class="subtitle-package">
-                    <!-- === 제목 수정됨 === -->
                     <h3>두 줄 자막 (5종)</h3>
                     <div class="image-grid grid-2-cols" style="margin-top: 15px;">
-                        <div class="image-item">
-                            <img src="./autumn_two1.png" alt="두 줄 자막 스타일 1">
-                        </div>
-                        <div class="image-item">
-                            <img src="./autumn_two2.png" alt="두 줄 자막 스타일 2">
-                        </div>
-                        <div class="image-item">
-                            <img src="./autumn_two3.png" alt="두 줄 자막 스타일 3">
-                        </div>
-                        <div class="image-item">
-                            <img src="./autumn_two4.png" alt="두 줄 자막 스타일 4">
-                        </div>
-                        <!-- === 항목 추가됨 === -->
-                        <div class="image-item">
-                            <img src="./autumn_two5.png" alt="두 줄 자막 스타일 5">
-                        </div>
+                        <div class="image-item"><img src="./autumn_two1.png" alt="두 줄 자막 스타일 1"></div>
+                        <div class="image-item"><img src="./autumn_two2.png" alt="두 줄 자막 스타일 2"></div>
+                        <div class="image-item"><img src="./autumn_two3.png" alt="두 줄 자막 스타일 3"></div>
+                        <div class="image-item"><img src="./autumn_two4.png" alt="두 줄 자막 스타일 4"></div>
+                        <div class="image-item"><img src="./autumn_two5.png" alt="두 줄 자막 스타일 5"></div>
                     </div>
                 </div>
 
                 <div class="subtitle-package" style="margin-top: 40px;">
                     <h3>한 줄 자막 (2종)</h3>
                     <div class="image-grid grid-2-cols" style="margin-top: 15px;">
-                        <div class="image-item">
-                            <img src="./autumn_one1.png" alt="한 줄 자막 스타일 1">
-                        </div>
-                        <div class="image-item">
-                            <img src="./autumn_one2.png" alt="한 줄 자막 스타일 2">
-                        </div>
+                        <div class="image-item"><img src="./autumn_one1.png" alt="한 줄 자막 스타일 1"></div>
+                        <div class="image-item"><img src="./autumn_one2.png" alt="한 줄 자막 스타일 2"></div>
                     </div>
                 </div>
             </section>
