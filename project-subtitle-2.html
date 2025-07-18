@@ -112,22 +112,22 @@
             flex: 1;
         }
 
-        /* === CSS 수정됨 === */
         /* 자막 이미지 그리드 */
         .image-grid {
             display: grid;
-            gap: 30px; /* 여백 조정 */
+            gap: 30px;
             grid-template-columns: 1fr 1fr;
             align-items: start;
         }
-        .image-block { /* 이미지와 캡션을 묶는 새 컨테이너 */
+        .image-block {
             text-align: center;
         }
         .image-item {
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            margin-bottom: 12px; /* 이미지와 캡션 사이 간격 */
+            margin-bottom: 12px;
+            cursor: pointer; /* 클릭 가능함을 표시 */
         }
         .image-item img {
             width: 100%;
@@ -135,7 +135,7 @@
             object-fit: cover;
             display: block;
         }
-        .image-caption { /* 캡션 스타일 */
+        .image-caption {
             font-weight: 600;
             color: #555;
             font-size: 1rem;
@@ -165,6 +165,13 @@
 
         /* 목록으로 버튼 */
         .back-to-list { text-align: center; margin-top: 40px; }
+        
+        /* === CSS 추가됨 === */
+        /* 이미지 팝업 모달 */
+        .modal-bg { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); z-index: 1001; justify-content: center; align-items: center; }
+        .modal-content { position: relative; width: 90%; max-width: 1000px; }
+        .close-btn { position: absolute; top: -40px; right: 0; font-size: 40px; color: #fff; cursor: pointer; }
+        .modal-img { width: 100%; max-height: 80vh; object-fit: contain; display: block; }
 
         /* 반응형 */
         @media (max-width: 768px) {
@@ -229,7 +236,6 @@
                     </a>
                 </div>
 
-                <!-- === HTML 구조 수정됨 === -->
                 <div class="subtitle-type-section">
                     <h3>정보 전달 자막</h3>
                     <div class="image-grid">
@@ -286,5 +292,47 @@
             </div>
         </div>
     </main>
+
+    <!-- === HTML 추가됨 === -->
+    <!-- 이미지 팝업 모달 -->
+    <div id="image-modal" class="modal-bg">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img src="" alt="상세 이미지" class="modal-img">
+        </div>
+    </div>
+
+    <!-- === JavaScript 추가됨 === -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const imageItems = document.querySelectorAll('.image-item');
+            const modal = document.getElementById('image-modal');
+            const modalImg = modal.querySelector('.modal-img');
+            const closeBtn = modal.querySelector('.close-btn');
+
+            imageItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const imgSrc = item.querySelector('img').getAttribute('src');
+                    if (imgSrc) {
+                        modalImg.src = imgSrc;
+                        modal.style.display = 'flex';
+                    }
+                });
+            });
+
+            const closeModal = () => {
+                modal.style.display = 'none';
+                modalImg.src = ''; // 이미지 소스 초기화
+            }
+
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                // 회색 배경 클릭 시 닫기
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
