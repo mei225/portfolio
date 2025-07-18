@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가을 산책 자막 패키지 - 정윤희 포트폴리오</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        /* CSS 코드는 여기에 포함됩니다. */
+        :root {
+            --primary-color: #FF8D49; /* 가을 느낌의 포인트 컬러 */
+            --text-color: #333;
+            --light-gray-color: #f9f9f9;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Pretendard', sans-serif; color: var(--text-color); background-color: var(--light-gray-color); }
+        .btn { display: inline-block; background-color: var(--primary-color); color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: 500; transition: background-color 0.3s ease; border: none; cursor: pointer; }
+        .btn:hover { background-color: #e67e42; }
+        
+        /* 헤더 */
+        header { background-color: rgba(255, 255, 255, 0.9); box-shadow: 0 2px 5px rgba(0,0,0,0.1); backdrop-filter: blur(5px); }
+        header nav { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .logo a { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: var(--text-color); }
+
+        /* 페이지 컨테이너 */
+        .project-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        /* 프로젝트 개요 */
+        .project-overview {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+        .project-overview h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .key-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .info-item strong {
+            display: block;
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        .info-item span {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .project-overview .description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            text-align: center;
+        }
+
+        /* 디자인 컨셉 & 상세 섹션 */
+        .content-section {
+            margin-bottom: 50px;
+        }
+        .content-section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        /* === CSS 수정됨 === */
+        /* 디자인 컨셉 */
+        .concept-details {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        .concept-item h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px; /* 여백 조정 */
+        }
+        .color-palette {
+            display: flex;
+            gap: 25px; /* 간격 조정 */
+            align-items: flex-start;
+        }
+        .color-sample {
+            text-align: center;
+        }
+        .color-chip {
+            width: 80px; /* 크기 증가 */
+            height: 80px; /* 크기 증가 */
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            margin-bottom: 10px;
+        }
+        .color-sample span {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        .color-info {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .color-info p {
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        /* 자막 이미지 그리드 */
+        .image-grid {
+            display: grid;
+            gap: 20px;
+        }
+        .grid-2-cols { grid-template-columns: 1fr 1fr; }
+        .image-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* 목록으로 버튼 */
+        .back-to-list { text-align: center; margin-top: 40px; }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .project-container { padding: 30px 20px; margin: 20px auto; }
+            .project-overview h1 { font-size: 2.2rem; }
+            .grid-2-cols { grid-template-columns: 1fr; }
+            .color-info { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Jung Yunhee</a></div>
+            <a href="index.html#portfolio" class="btn">목록으로</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="project-container">
+            
+            <!-- 1. 프로젝트 개요 -->
+            <section class="project-overview">
+                <h1>가을 산책 자막 패키지</h1>
+                <div class="key-info">
+                    <div class="info-item"><strong>GOAL</strong><span>감성있는 가을 분위기</span></div>
+                    <div class="info-item"><strong>ROLE</strong><span>자막 패키지 기획&디자인</span></div>
+                </div>
+                <p class="description">
+                    가을 산책 VLOG 시리즈의 서정적인 영상미를 극대화하기 위해, 텍스트가 풍경의 일부처럼 자연스럽게 녹아들도록 디자인했습니다. 가독성은 물론, 영상의 감성까지 한 단계 끌어올리는 데 중점을 두었습니다.
+                </p>
+            </section>
+
+            <!-- 2. 디자인 컨셉 -->
+            <section class="content-section">
+                <h2>디자인 컨셉</h2>
+                <div class="concept-details">
+                    <div class="concept-item">
+                        <h3>Color Palette</h3>
+                        <div class="color-info">
+                            <!-- === HTML 수정됨 === -->
+                            <div class="color-palette">
+                                <div class="color-sample">
+                                    <div class="color-chip" style="background-color: #FFE144;"></div>
+                                    <span>#FFE144</span>
+                                </div>
+                                <div class="color-sample">
+                                    <div class="color-chip" style="background-color: #FF8D49;"></div>
+                                    <span>#FF8D49</span>
+                                </div>
+                            </div>
+                            <p>화면의 전체적인 톤을 해치지 않으면서도 시청자의 시선을 부드럽게 이끌 수 있도록, 채도가 낮은 노란색과 주황색을 핵심 컬러로 선정했습니다. 따스한 햇살과 깊어가는 단풍을 상징하는 이 색상 조합은 영상의 계절감을 더욱 풍부하게 만들어 줍니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. 자막 패키지 상세 -->
+            <section class="content-section">
+                <h2>자막 패키지 상세</h2>
+                
+                <div class="subtitle-package">
+                    <h3>두 줄 자막 (4종)</h3>
+                    <div class="image-grid grid-2-cols" style="margin-top: 15px;">
+                        <div class="image-item">
+                            <img src="https://placehold.co/600x400/DABF99/FFFFFF?text=Style+1" alt="두 줄 자막 스타일 1">
+                        </div>
+                        <div class="image-item">
+                            <img src="https://placehold.co/600x400/DABF99/FFFFFF?text=Style+2" alt="두 줄 자막 스타일 2">
+                        </div>
+                        <div class="image-item">
+                            <img src="https://placehold.co/600x400/DABF99/FFFFFF?text=Style+3" alt="두 줄 자막 스타일 3">
+                        </div>
+                        <div class="image-item">
+                            <img src="https://placehold.co/600x400/DABF99/FFFFFF?text=Style+4" alt="두 줄 자막 스타일 4">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subtitle-package" style="margin-top: 40px;">
+                    <h3>한 줄 자막 (2종)</h3>
+                    <div class="image-grid grid-2-cols" style="margin-top: 15px;">
+                        <div class="image-item">
+                            <img src="https://placehold.co/600x400/DABF99/FFFFFF?text=Style+A" alt="한 줄 자막 스타일 1">
+                        </div>
+                        <div class="image-item">
+                            <img src="https://placehold.co/600x400/DABF99/FFFFFF?text=Style+B" alt="한 줄 자막 스타일 2">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="back-to-list">
+                <a href="index.html#portfolio" class="btn">포트폴리오 목록으로</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
