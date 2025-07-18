@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다랑논 프로젝트 자막 패키지</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        /* CSS 코드는 여기에 포함됩니다. */
+        :root {
+            --primary-color: #FFB100; /* 다랑논 메인 컬러 */
+            --text-color: #333;
+            --light-gray-color: #f9f9f9;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Pretendard', sans-serif; color: var(--text-color); background-color: var(--light-gray-color); }
+        .btn { display: inline-block; background-color: var(--primary-color); color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: 500; transition: background-color 0.3s ease; border: none; cursor: pointer; }
+        .btn:hover { background-color: #e69e00; }
+        
+        /* 헤더 */
+        header { background-color: rgba(255, 255, 255, 0.9); box-shadow: 0 2px 5px rgba(0,0,0,0.1); backdrop-filter: blur(5px); }
+        header nav { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .logo a { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: var(--text-color); }
+
+        /* 페이지 컨테이너 */
+        .project-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        /* 프로젝트 개요 */
+        .project-overview {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+        .project-overview h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .project-overview .description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            text-align: center;
+        }
+
+        /* 디자인 컨셉 & 상세 섹션 */
+        .content-section {
+            margin-bottom: 50px;
+        }
+        .content-section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .subtitle-type-section {
+            margin-bottom: 40px;
+        }
+        .subtitle-type-section:last-child {
+            margin-bottom: 0;
+        }
+        .subtitle-type-section h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* 디자인 컨셉 */
+        .concept-item h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .color-palette {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+        .color-sample {
+            text-align: center;
+        }
+        .color-chip {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            margin-bottom: 10px;
+        }
+        .color-sample span {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        .color-info {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .color-info p {
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        /* 자막 이미지 그리드 */
+        .image-grid {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 1fr 1fr;
+            align-items: start;
+        }
+        .image-block {
+            text-align: center;
+        }
+        .image-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 12px;
+        }
+        .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .image-caption {
+            font-weight: 600;
+            color: #555;
+            font-size: 1rem;
+        }
+        
+        /* 비디오 쇼케이스 섹션 */
+        .video-showcase-section {
+            background-color: var(--light-gray-color);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .video-showcase-section h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .video-showcase-section p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .video-showcase-section .video-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* 목록으로 버튼 */
+        .back-to-list { text-align: center; margin-top: 40px; }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .project-container { padding: 30px 20px; margin: 20px auto; }
+            .project-overview h1 { font-size: 2.2rem; }
+            .image-grid { grid-template-columns: 1fr; }
+            .color-info { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Jung Yunhee</a></div>
+            <a href="index.html#portfolio" class="btn">목록으로</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="project-container">
+            
+            <section class="project-overview">
+                <h1>다랑논 프로젝트 자막 패키지</h1>
+                <p class="description">
+                    다랑논의 풍요로움과 자연의 활기를 담은 영상 프로젝트를 위한 자막 패키지입니다. 밝고 긍정적인 분위기를 전달하는 데 중점을 두었습니다.
+                </p>
+            </section>
+
+            <section class="content-section">
+                <h2>디자인 컨셉</h2>
+                <div class="concept-item">
+                    <h3>Color Palette</h3>
+                    <div class="color-info">
+                        <div class="color-palette">
+                            <div class="color-sample">
+                                <div class="color-chip" style="background-color: #FFE1A4;"></div>
+                                <span>#FFE1A4</span>
+                            </div>
+                            <div class="color-sample">
+                                <div class="color-chip" style="background-color: #FFB100;"></div>
+                                <span>#FFB100</span>
+                            </div>
+                        </div>
+                        <p>잘 익은 벼의 황금빛과 따사로운 햇살을 상징하는 노란색 계열을 사용하여, 영상에 풍요롭고 생동감 넘치는 에너지를 더하고자 했습니다.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>자막 패키지 상세</h2>
+
+                <div class="video-showcase-section">
+                    <h3>실제 적용 영상</h3>
+                    <p>이 자막 패키지가 실제로 적용된 영상을 통해 디자인의 완성도를 확인해보세요.</p>
+                    <a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank" class="btn video-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        유튜브에서 영상 보기
+                    </a>
+                </div>
+                
+                <div class="subtitle-type-section">
+                    <h3>기본 자막</h3>
+                    <div class="image-grid">
+                        <div class="image-block">
+                            <div class="image-item"><img src="./non1.png" alt="말자막"></div>
+                            <div class="image-caption">말자막</div>
+                        </div>
+                        <div class="image-block">
+                            <div class="image-item"><img src="./non2.png" alt="두 줄 자막 1"></div>
+                            <div class="image-caption">두 줄 자막 (Style 1)</div>
+                        </div>
+                        <div class="image-block">
+                            <div class="image-item"><img src="./non3.png" alt="두 줄 자막 2"></div>
+                            <div class="image-caption">두 줄 자막 (Style 2)</div>
+                        </div>
+                         <div class="image-block">
+                            <div class="image-item"><img src="./non4.png" alt="반응 자막"></div>
+                            <div class="image-caption">반응 자막</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subtitle-type-section">
+                    <h3>한 줄 자막 (5종)</h3>
+                    <div class="image-grid">
+                        <div class="image-block">
+                            <div class="image-item"><img src="./non5.png" alt="한 줄 자막 1"></div>
+                            <div class="image-caption">Style 1</div>
+                        </div>
+                        <div class="image-block">
+                            <div class="image-item"><img src="./non6.png" alt="한 줄 자막 2"></div>
+                            <div class="image-caption">Style 2</div>
+                        </div>
+                        <div class="image-block">
+                            <div class="image-item"><img src="./non7.png" alt="한 줄 자막 3"></div>
+                            <div class="image-caption">Style 3</div>
+                        </div>
+                        <div class="image-block">
+                            <div class="image-item"><img src="./non8.png" alt="한 줄 자막 4"></div>
+                            <div class="image-caption">Style 4</div>
+                        </div>
+                        <div class="image-block">
+                            <div class="image-item"><img src="./non9.png" alt="한 줄 자막 5"></div>
+                            <div class="image-caption">Style 5</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="back-to-list">
+                <a href="index.html#portfolio" class="btn">포트폴리오 목록으로</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
